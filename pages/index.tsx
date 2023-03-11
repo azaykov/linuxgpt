@@ -128,7 +128,13 @@ const Home: NextPage = () => {
               minHeight: "9rem",
             }}
           >
-            <pre className="p-4 whitespace-pre-wrap">{result}</pre>
+            {/* <pre className="p-4 whitespace-pre-wrap">{result}</pre> */}
+            <code className="!whitespace-pre hljs language-shell">
+              <span className="hljs-meta prompt_">$ </span>
+              <span className="bash"><span className="hljs-built_in">ls</span></span>
+              {"\n"}
+              {result}
+            </code>
           </Card>
         ) : undefined}
       </main>
