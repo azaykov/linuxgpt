@@ -100,6 +100,12 @@ const Home: NextPage = () => {
             onChange={(event) => {
               setInput(event.currentTarget.value);
             }}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                start();
+              }
+            }}
           />
         </Card>
 
